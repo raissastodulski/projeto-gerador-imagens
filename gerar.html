@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Imagens</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="gerar.html" class="active">Gerar</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>Gerador de Imagens</h1>
+        </header>
+    
+    <div>
+        <h2>Instruções</h2>
+        <ul>
+            <li>Descreva detalhadamente a imagem que você deseja gerar</li>
+            <li>Clique no botão "Gerar Imagem" para processar sua solicitação</li>
+        </ul>
+    </div>
+
+    <form id="image-generator-form" action="#">
+        <div class="form-field">
+            <label for="image-description">Descrição da Imagem:</label>
+            <input type="text" id="image-description" name="image-description" placeholder="Exemplo: Um pôr do sol na praia com ondas suaves" required>
+        </div>
+        <br>
+        <div class="form-field text-center">
+            <button type="submit">Gerar Imagem</button>
+        </div>
+    </form>
+    
+    <div>
+        <h3>Imagem Gerada:</h3>
+        <img src="https://picsum.photos/id/30/200/200" alt="Imagem a ser gerada com base na sua descrição">
+    </div>
+    </div>
+    
+    <a href="#" id="back-to-top" title="Voltar ao topo">↑</a>
+</body>
+</html>

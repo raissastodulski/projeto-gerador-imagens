@@ -1,0 +1,702 @@
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    margin-top: 60px; /* Adiciona espaço para o menu fixo no topo */
+    position: relative; /* Necessário para posicionamento de elementos filhos */
+}
+
+/* Usando combinador para estilizar o form dentro do container da página de contato */
+.container > form {
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+/* Estilizando o fieldset dentro do form no container */
+.container > form > fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Combinador para a legenda do fieldset */
+.container > form > fieldset > legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* Navigation Menu - Fixed at top */
+.nav-menu {
+    background-color: #1e3a8a;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    float: left;
+}
+
+/* Utilizando combinador para estilizar links dentro do menu de navegação */
+.nav-menu > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.5px; /* Melhor espaçamento entre letras */
+    font-size: 0.9rem;
+}
+
+/* Estilizando o efeito hover no menu de navegação com combinador */
+.nav-menu > ul > li > a:hover {
+    background-color: #3b82f6;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando o link ativo no menu */
+.nav-menu > ul > li > a.active {
+    background-color: #3b82f6;
+    font-weight: bold;
+}
+
+/* Cabeçalhos e parágrafos com combinadores */
+.container > h1 {
+    font-size: larger; 
+    color: #1e3a8a; /* Dark blue heading */
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3b82f6; /* Medium blue border */
+}
+
+.container > h2 {
+    font-size: large; 
+    color: #2563eb; /* Slightly lighter blue */
+    font-weight: bold;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Estilo específico para h2 centralizado */
+.container > h2.text-center {
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.container > h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #3b82f6;
+    border-radius: 2px;
+}
+
+.container > p {
+    font-size: small; 
+    color: #4b5563; /* Dark gray text */
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estilos específicos para parágrafos dentro de seções */
+section > p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Visual mais limpo */
+    margin: 25px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Bordas para organizar os elementos */
+}
+
+th {
+    background-color: #1e3a8a; /* Cor de fundo azul escuro para cabeçalhos */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc; /* Linhas alternadas para melhor leitura */
+}
+
+tr:hover {
+    background-color: rgba(191, 219, 254, 0.4); /* Light blue hover */
+}
+
+/* Estilo específico para tabela de galeria */
+.image-gallery {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+.image-gallery th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.image-gallery td {
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.image-gallery .image-container {
+    position: relative; /* Container para a imagem posicionado relativamente */
+    width: 250px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: absolute; /* Imagem posicionada absolutamente dentro do container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid #93c5fd;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.1);
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.image-gallery .image-description {
+    font-weight: normal;
+    color: #4b5563;
+    margin-top: 10px;
+}
+
+.image-gallery .image-date {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Links styling */
+a {
+    color: #1a56db; /* Azul mais vibrante */
+    text-decoration: none; /* Removendo sublinhado */
+    padding: 2px 4px;
+    display: inline; /* Mantém links como elementos inline */
+    font-weight: bold; /* Deixando os links em negrito */
+    transition: all 0.3s ease; /* Transição suave para efeitos hover */
+}
+
+a:hover {
+    text-decoration: none; /* Removendo sublinhado no hover */
+    background-color: rgba(191, 219, 254, 0.5); /* Light blue hover background */
+    color: #0f3eb6; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: block; /* Mantém imagens como elementos block para controle de largura */
+    border: 2px solid #93c5fd; /* Light blue border */
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.1); /* Subtle blue shadow */
+}
+
+/* Navigation adjustment for consistent tables */
+table a {
+    display: inline-block; /* Permite largura e altura em links dentro de tabelas */
+    width: 100%;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #1e40af;
+    transition: all 0.3s ease;
+}
+
+table a:hover {
+    background-color: #dbeafe;
+    transform: none; /* Desativando o efeito de elevação nas tabelas para melhor aparência */
+    box-shadow: none;
+}
+
+.card a, .gallery-item a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card a:hover, .gallery-item a:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.download-link {
+    background-color: #4ade80; /* Verde */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.download-link:hover {
+    background-color: #16a34a; /* Verde mais escuro */
+    transform: scale(1.05);
+}
+
+/* Form styling */
+form {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Combinadores para colunas do formulário */
+form > fieldset > div.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+form > fieldset > div.form-row > div {
+    flex: 1;
+}
+
+form > fieldset > div.form-row > div:first-child {
+    margin-right: 15px;
+}
+
+/* Combinador para divs normais dentro de fieldsets */
+form > fieldset > div:not(.form-row) {
+    margin-bottom: 15px;
+}
+
+/* Combinador para div de botões */
+form > div.text-center {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Combinador para todos os labels dentro de forms */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* Combinador para elementos de input específicos dentro de forms */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    display: block;
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #93c5fd;
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: #f8fafc;
+}
+
+/* Classe para campos do formulário com padding igual */
+.form-field {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Combinador para botões dentro de forms */
+form button {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #1d4ed8;
+}
+
+/* List styling */
+ul, ol {
+    display: block;
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+li {
+    display: list-item;
+    margin-bottom: 8px;
+}
+
+/* Combinador para listas dentro de containers */
+.container > ul {
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+/* Combinador para listas dentro de sections */
+section > ul {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+/* Combinador para itens dentro de listas em containers */
+.container > ul > li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Feature list styling com combinadores */
+.feature-list {
+    padding: 0;
+    list-style-type: none;
+    display: block;
+    text-align: center;
+}
+
+/* Combinador para itens da lista de features */
+.feature-list > li {
+    display: inline-block;
+    width: 180px;
+    margin: 10px 15px;
+    padding: 15px;
+    background-color: #f0f9ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    vertical-align: top;
+    transition: transform 0.2s;
+}
+
+.feature-list > li:hover {
+    transform: scale(1.05);
+    background-color: #e0f2fe;
+}
+
+/* Combinador para ícones dentro dos itens de features */
+.feature-list > li > .feature-icon {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Combinador para parágrafos dentro de itens de feature */
+.feature-list > li > p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Utility classes for display */
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+/* Estilo específico para tabela de navegação */
+.navigation-table th {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+}
+
+.navigation-table td {
+    border: 1px solid #e2e8f0;
+    vertical-align: middle;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: auto;
+}
+
+.nav-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery layout */
+.gallery-container {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    position: relative; /* Container posicionado relativamente */
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    vertical-align: top;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+    border: none;
+}
+
+.gallery-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.gallery-info h3 {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+    color: #1e3a8a;
+}
+
+.gallery-info p {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Estilos para seções específicas na página sobre */
+.benefits {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f0f9ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Combinador para título dentro da seção benefits */
+.benefits > h2 {
+    color: #1e3a8a;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bfdbfe;
+    padding-bottom: 8px;
+}
+
+/* Combinador para lista dentro da seção benefits */
+.benefits > ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+/* Combinador para itens da lista dentro da seção benefits */
+.benefits > ul > li {
+    color: #4b5563;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding-left: 5px;
+}
+
+/* Combinador para seção de descrição do projeto */
+.project-description {
+    margin-bottom: 30px;
+}
+
+/* Combinador para parágrafos dentro da descrição do projeto */
+.project-description > p {
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+.card-container {
+    display: block;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width: 230px;
+    height: 300px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    vertical-align: top;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Usando combinador para imagens dentro de cards */
+.card > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Combinador para títulos h3 dentro de cards */
+.card > h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Combinador para parágrafos dentro de cards */
+.card > p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+/* Combinador para links dentro de cards */
+/* Combinador para links dentro de cards */
+.card > a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Botão voltar ao topo */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0.7;
+    z-index: 999;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    background-color: #3b82f6;
+}
